@@ -1,0 +1,256 @@
+<!DOCTYPE html><html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Beabee — Official Website</title>
+  <link rel="icon" href="icon.png" />
+  <style>
+    /* === BASE === */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }body {
+  font-family: 'Segoe UI', sans-serif;
+  color: #f5f5f5;
+  background: #0e0e0e url('data:image/svg+xml;utf8,<svg width="100" height="100" xmlns="http://www.w3.org/2000/svg"><polygon points="50,15 90,40 90,80 50,105 10,80 10,40" fill="%23181818"/></svg>') repeat;
+  background-size: 80px;
+  scroll-behavior: smooth;
+}
+
+a {
+  color: #ffcb05;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* === HEADER === */
+header {
+  background: #1e1e1e;
+  padding: 20px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.4);
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.logo img {
+  height: 40px;
+}
+
+.logo h1 {
+  color: #ffcb05;
+  font-size: 1.8rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+nav a {
+  margin-left: 25px;
+  font-weight: 600;
+}
+
+/* === MAIN === */
+main {
+  max-width: 960px;
+  margin: 60px auto;
+  padding: 0 20px;
+}
+
+section {
+  margin-bottom: 80px;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.6s ease-out;
+}
+
+section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+h2 {
+  font-size: 1.8em;
+  color: #ffcb05;
+  margin-bottom: 16px;
+  border-bottom: 2px solid #ffcb05;
+  padding-bottom: 8px;
+}
+
+p, li {
+  font-size: 1.1em;
+  line-height: 1.6;
+  margin-bottom: 10px;
+}
+
+ul {
+  margin-left: 20px;
+}
+
+.important-text {
+  color: #ff5733;
+  font-weight: bold;
+}
+
+/* === FOOTER === */
+footer {
+  text-align: center;
+  background: #1e1e1e;
+  padding: 20px;
+  color: #aaa;
+  font-size: 0.9em;
+}
+
+/* === HERO === */
+.hero {
+  text-align: center;
+  margin-bottom: 80px;
+}
+
+.hero h2 {
+  font-size: 2.4em;
+  color: #ffcb05;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 1.2em;
+  color: #ddd;
+}
+
+/* === BEE ANIMATION === */
+#bee {
+  position: fixed;
+  top: 50%;
+  left: -60px;
+  font-size: 48px;
+  pointer-events: none;
+  transform-origin: center center;
+  opacity: 0;
+  z-index: 2000;
+}
+
+@keyframes beeFly {
+  0% {
+    transform: translateX(0) rotate(0deg);
+    opacity: 1;
+  }
+  50% {
+    transform: translateX(80vw) translateY(-20vh) rotate(720deg);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(100vw) translateY(-40vh) rotate(1080deg);
+    opacity: 0;
+  }
+}
+
+.fly {
+  animation: beeFly 2.5s ease forwards;
+}
+
+  </style>
+</head>
+<body>  <header>
+    <div class="logo">
+      <img src="icon.png" alt="Beabee Logo" />
+      <h1>Beabee</h1>
+    </div>
+    <nav>
+      <a href="#about" class="nav-link">About</a>
+      <a href="#terms" class="nav-link">Terms</a>
+      <a href="#privacy" class="nav-link">Privacy</a>
+      <a href="#contact" class="nav-link">Contact</a>
+    </nav>
+  </header>  <main>
+    <div class="hero">
+      <h2>Buzzing with Innovation 🐝</h2>
+      <p>We create tools that empower people to do more, think smarter, and stay motivated every day.</p>
+    </div><section id="about">
+  <h2>About Beabee</h2>
+  <p>
+    Beabee is a forward-thinking brand committed to digital excellence. Our mission is to simplify the user's day through reliable, well-crafted tools that deliver real value.
+  </p>
+</section>
+
+<section id="terms">
+  <h2>Terms of Use</h2>
+  <p class="important-text">By using our services, you agree to comply with all applicable laws and regulations.</p>
+  <p>
+    Beabee takes no responsibility for misuse of our tools. We expect respectful, ethical use of everything we provide.
+  </p>
+</section>
+
+<section id="privacy">
+  <h2>Privacy Policy</h2>
+  <p class="important-text">We take your privacy seriously.</p>
+  <ul>
+    <li><strong>Data Collection:</strong> Only what's necessary for functionality.</li>
+    <li><strong>Data Use:</strong> For improving and personalizing user experience.</li>
+    <li><strong>Security:</strong> We use modern protection standards.</li>
+    <li><strong>Third Parties:</strong> No sharing without consent.</li>
+    <li class="important-text"><strong>Your Rights:</strong> You may request data deletion or access at any time.</li>
+  </ul>
+</section>
+
+<section id="contact">
+  <h2>Contact</h2>
+  <p>Email us at <a href="mailto:beabeesup@gmail.com">beabeesup@gmail.com</a></p>
+</section>
+
+  </main>  <footer>
+    &copy; 2025 Beabee. All rights reserved.
+  </footer>  <div id="bee">🐝</div>  <script>
+    // Animate sections on scroll
+    const sections = document.querySelectorAll("section");
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("visible");
+        }
+      });
+    }, { threshold: 0.1 });
+
+    sections.forEach(section => observer.observe(section));
+
+    // Bee animation
+    const navLinks = document.querySelectorAll('.nav-link');
+    const bee = document.getElementById('bee');
+
+    navLinks.forEach(link => {
+      link.addEventListener('click', (e) => {
+        e.preventDefault();
+        const targetId = link.getAttribute('href').substring(1);
+        const targetSection = document.getElementById(targetId);
+
+        if (!targetSection) return;
+
+        if (!bee.classList.contains('fly')) {
+          bee.style.opacity = '1';
+          bee.classList.add('fly');
+        }
+
+        setTimeout(() => {
+          targetSection.scrollIntoView({ behavior: 'smooth' });
+        }, 300);
+
+        bee.addEventListener('animationend', () => {
+          bee.classList.remove('fly');
+          bee.style.opacity = '0';
+        }, { once: true });
+      });
+    });
+  </script></body>
+</html>
